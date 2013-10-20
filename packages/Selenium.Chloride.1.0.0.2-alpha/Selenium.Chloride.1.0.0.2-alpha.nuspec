@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Selenium.Chloride</id>
+    <version>1.0.0.2-alpha</version>
+    <title>Selenium Chloride</title>
+    <authors>Daniel Charlton</authors>
+    <owners>Daniel Charlton</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A wrapper for Selenium Webdriver to make it friendlier to none developers as well as making it easier to implement the page object pattern.</description>
+    <summary>A reagent for Selenium</summary>
+    <releaseNotes />
+    <copyright>Copyright © 2013 - Daniel Charlton, Reiver Solutions</copyright>
+    <language>en-GB</language>
+    <tags>Selenium Webdriver Chloride Page Object Model</tags>
+    <dependencies>
+      <dependency id="LinqToPoml" version="1.0.0.3" />
+      <dependency id="Selenium.WebDriver" version="2.37.0" />
+      <dependency id="Selenium.Support" version="2.37.0" />
+    </dependencies>
+  </metadata>
+</package>

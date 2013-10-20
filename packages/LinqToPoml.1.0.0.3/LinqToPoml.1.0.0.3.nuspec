@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>LinqToPoml</id>
+    <version>1.0.0.3</version>
+    <title>LINQ to POML</title>
+    <authors>Daniel Charlton</authors>
+    <owners>Daniel Charlton</owners>
+    <projectUrl>https://github.com/reiversolutions/LinqToPoml</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Easy to use library to use Page Object Markup Language (.poml) files with LINQ queries</description>
+    <summary>LINQ queries for .poml files.</summary>
+    <releaseNotes />
+    <copyright>Copyright © 2013 - Daniel Charlton, Reiver Solutions</copyright>
+    <language>en-GB</language>
+    <tags>Page Object Markup Language .poml</tags>
+  </metadata>
+</package>
