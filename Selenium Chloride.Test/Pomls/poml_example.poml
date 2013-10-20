@@ -1,0 +1,6 @@
+<Pages group="Reiver Solutions">
+	<Page name="Home">
+		<Element name="Blog" locator="#blog>a" selector="Link" type="css" />
+		<Element name="About" locator="#info>a" selector="Link" type="css" />
+	</Page>
+</Pages>
