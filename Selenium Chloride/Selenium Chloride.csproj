@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{705EAB93-5388-453E-BC35-A0BAF60577B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Selenium_Chloride</RootNamespace>
+    <AssemblyName>Selenium Chloride</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Selenium Chloride.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon-small.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LINQtoPOML, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\LinqToPoml.1.0.0.3\lib\LINQtoPOML.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WebDriver, Version=2.37.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.WebDriver.2.37.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.37.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Selenium.Support.2.37.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Internal\Constants\Common.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Public\Exceptions\BrowserTimeoutException.cs" />
+    <Compile Include="Public\Exceptions\ConfigException.cs" />
+    <Compile Include="Public\Exceptions\PageElementNotFoundException.cs" />
+    <Compile Include="Public\Exceptions\PageElementTypeException.cs" />
+    <Compile Include="Public\IPage.cs" />
+    <Compile Include="Public\IWebDriverObjects\Browser.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserAlertExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserClickExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserFindExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserPointerExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserPropertiesExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserSelectExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserTextExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\Extensions\BrowserWaitExtensions.cs" />
+    <Compile Include="Public\IWebDriverObjects\IBrowser.cs" />
+    <Compile Include="Public\IWebElementObjects\ButtonElement.cs" />
+    <Compile Include="Public\IWebElementObjects\CheckboxElement.cs" />
+    <Compile Include="Public\IWebElementObjects\Extensions\PageElementFindExtensions.cs" />
+    <Compile Include="Public\IWebElementObjects\ImageElement.cs" />
+    <Compile Include="Public\IWebElementObjects\LabelElement.cs" />
+    <Compile Include="Public\IWebElementObjects\LinkElement.cs" />
+    <Compile Include="Public\IWebElementObjects\PageElement.cs" />
+    <Compile Include="Public\IWebElementObjects\RadioElement.cs" />
+    <Compile Include="Public\IWebElementObjects\SelectElement.cs" />
+    <Compile Include="Public\IWebElementObjects\TableElement.cs" />
+    <Compile Include="Public\IWebElementObjects\TextElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon-small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
