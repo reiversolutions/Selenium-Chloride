@@ -2,14 +2,14 @@
 ## A reagent for Selenium
 
 A wrapper for [Selenium Webdriver](http://seleniumhq.org/docs/03_webdriver.jsp)
-to make it friendlier to none developers as well as making it easier to 
+to make it friendlier to non-developers as well as making it easier to 
 implement the page object pattern.
 
 
 -------------------------------------------------------------------------------
 
 ## How it works
-Selenium Chloride works by short cutting existing methods as well as 
+Selenium Chloride works by wrapping existing methods as well as 
 abstracting away information that is not necessary to the developer/tester.
 
 Lets start with a short cut example. Here is clicking on a link with Selenium.
@@ -18,19 +18,19 @@ Lets start with a short cut example. Here is clicking on a link with Selenium.
     element.Click();
 
 With Selenium the developer needs to know what kind of 'By' method to use and 
-the actually locator name. With Selenium Chloride we can assume we have a 
+the actual locator type. With Selenium Chloride we can assume we have a 
 variable and do the following;
 
     browser.Click(login);
 
-The reason we can do this is because of Selenium Chloride's other main feature, 
-the page object pattern. Selenium already has a page object pattern but 
-Selenium Chloride implements it differently. Selenium Chloride chooses to 
-allow changes to the objects to be done outside of code. The advantages to this 
-is;
+The reason we can do this is because a key feature of Selenium Chloride is
+the way it implements the page object pattern, allowing management 
+of and changes to the objects to be done outside of code.
+
+The advantages to this are;
 
 - To maintain the objects no programming experience is necessary.
-- Changes to the objects does not mean the code base needs changed.
+- Changes to the objects do not have to mean changes to the code base.
 - Developer is abstracted from how the page elements are retrieved.
 
 ### Example poml to page object
