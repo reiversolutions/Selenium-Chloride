@@ -35,5 +35,18 @@ namespace Selenium_Chloride
             // Select by value
             select.SelectByText(text);
         }
+
+        /// <summary>
+        /// Select from a dropdown by index
+        /// </summary>
+        /// <param name="element">Select element</param>
+        /// <param name="text">Option index</param>
+        public static void SelectByIndex(this IBrowser browser, SelectElement element, int value)
+        {
+            // Create selenium select element object
+            var select = new OpenQA.Selenium.Support.UI.SelectElement(browser.Find(element));
+            // Select by value
+            select.SelectByIndex(value);
+        }
     }
 }

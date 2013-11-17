@@ -74,18 +74,11 @@ namespace Selenium_Chloride
         /// </summary>
         public string Type { get; internal set; }
 
+        // IWebElement properties
         /// <summary>
         /// IWebElement that drives element
         /// </summary>
-        public IWebElement IWebElement 
-        {
-            get
-            {
-                return _browser.Find(this);
-            }
-        }
-
-        // IWebElement properties
+        public IWebElement IWebElement { get { return _browser.Find(this); } }
         /// <summary>
         /// Return the Id of the element
         /// </summary>
@@ -95,13 +88,14 @@ namespace Selenium_Chloride
         /// </summary>
         public string Class { get { return IWebElement.GetAttribute("class"); } }
         /// <summary>
+        /// Return innner html text from this element
+        /// </summary>
+        public string InnerText { get { return IWebElement.Text; } }
+        /// <summary>
         /// Return a css property
         /// </summary>
         /// <param name="property">Property name</param>
         /// <returns>CSS value</returns>
-        public string GetCSS(string property)
-        {
-            return IWebElement.GetCssValue(property);
-        }
+        public string GetCSS(string property) { return IWebElement.GetCssValue(property); }
     }
 }
