@@ -104,15 +104,32 @@ The advantages to this are;
         }
     }
 
-[General Config example](http://www.reiversolutions.co.uk/products/selenium-chloride-config)
+## General Config example
+
+    <?xml version="1.0" encoding="utf-8" ?>
+    <configuration>
+        <appSettings>
+            <!--  Browser type -->
+            <add key="Browser" value="Firefox" />
+
+            <!--  Grid path if using selenium grid -->
+            <!-- <add key="GridPath" value="" /> -->
+
+            <!--  Starting web address -->
+            <add key="SiteUrl" value="www.example.com" />
+
+            <!--  Directory where .poml are stored -->
+            <add key="PomlDir" value="../../../ProjectName/PomlFolder" />
+
+            <!--  Directory where print screens can be stored -->
+            <add key="PrintScreenDir" value="../../../ProjectName/ScreenShots" />
+        </appSettings>
+    </configuration>
 
 ## Nuget install
 
     Install-Package Selenium.Chloride
-	
-## Api documentation
 
-[www.reiversolutions.co.uk/Products/open/selenium-chloride-api](http://www.reiversolutions.co.uk/products/selenium-chloride-api)
 
 -------------------------------------------------------------------------------
 
