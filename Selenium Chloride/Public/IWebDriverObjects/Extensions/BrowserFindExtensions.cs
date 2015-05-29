@@ -16,7 +16,7 @@ namespace Selenium_Chloride
         /// </summary>
         /// <param name="element">Page Element to search for</param>
         /// <returns>IWebElement of the page element</returns>
-        public static IWebElement Find(this IBrowser browser, PageElement element)
+        public static IWebElement Find(this IBrowser browser, PageElement element, bool attemptWait = true)
         {
             try
             {
@@ -51,13 +51,20 @@ namespace Selenium_Chloride
                 }
             } catch (NoSuchElementException)
             {
-                try
+                if (attemptWait)
                 {
-                    browser.WaitForElementPresent(element);
-                    return browser.Find(element);
-                } catch (BrowserTimeoutException bte)
+                    try
+                    {
+                        browser.WaitForElementPresent(element);
+                        return browser.Find(element, false);
+                    }
+                    catch (BrowserTimeoutException bte)
+                    {
+                        throw new PageElementNotFoundException("Browser timed out trying to find element.", bte);
+                    }
+                } else
                 {
-                    throw new PageElementNotFoundException("Browser timed out trying to find element.", bte);
+                    throw new PageElementNotFoundException("Browser timed out trying to find element.");
                 }
             }
         }

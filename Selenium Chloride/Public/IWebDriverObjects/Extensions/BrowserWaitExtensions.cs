@@ -45,7 +45,7 @@ namespace Selenium_Chloride
             {
                 try
                 {
-                    IWebElement temp = browser.Find(element);
+                    IWebElement temp = browser.Find(element, false);
                     return;
                 } catch (NoSuchElementException) { Thread.Sleep(200); }
             }
@@ -64,7 +64,7 @@ namespace Selenium_Chloride
             {
                 try
                 {
-                    IWebElement temp = browser.Find(element);
+                    IWebElement temp = browser.Find(element, false);
                     Thread.Sleep(200);
                 } catch (NoSuchElementException) { return; }
             }

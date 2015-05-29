@@ -34,7 +34,7 @@ namespace Selenium_Chloride.Test
             Browser = new Browser();
 
             // Assert
-            Assert.AreEqual("Welcome home – Reiver Solutions", Browser.IWebDriver.Title);
+            Assert.AreEqual("Reiver Solutions", Browser.IWebDriver.Title);
         }
 
         [TestMethod]
@@ -48,7 +48,7 @@ namespace Selenium_Chloride.Test
             Browser = new Browser(type);
 
             // Assert
-            Assert.AreEqual("Welcome home – Reiver Solutions", Browser.IWebDriver.Title);
+            Assert.AreEqual("Reiver Solutions", Browser.IWebDriver.Title);
         }
 
         [TestMethod]
@@ -64,23 +64,6 @@ namespace Selenium_Chloride.Test
         }
 
         [TestMethod]
-        public void Pomls_Test()
-        {
-            // Assign
-            Browser = new Browser();
-            List<PageObjectFile> result = null;
-
-            // Act
-            result = Browser.Pomls;
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual(1, result.Count);
-            Assert.AreEqual(1, result[0].Data.ListOfPages.Count);
-            Assert.AreEqual(2, result[0].Data.ListOfPages[0].ListOfElements.Count);
-        }
-
-        [TestMethod]
         public void Title_Test()
         {
             // Assign
@@ -91,7 +74,7 @@ namespace Selenium_Chloride.Test
             result = Browser.Title;
 
             // Assert
-            Assert.AreEqual("Welcome home – Reiver Solutions", result);
+            Assert.AreEqual("Reiver Solutions", result);
         }
 
         [TestMethod]
@@ -106,24 +89,5 @@ namespace Selenium_Chloride.Test
             // Assert
             Assert.AreEqual("Google", Browser.Title);
         }
-
-        #region Find tests
-        [TestMethod]
-        public void Find_ValidByCss_Test()
-        {
-            // Assign
-            Browser = new Browser();
-            PageElement pageElement = new PageElement(Browser, "About");
-            IWebElement webElement = Browser.IWebDriver.FindElement(By.CssSelector("#info>a"));
-            IWebElement result = null;
-
-            // Act
-            result = Browser.Find(pageElement);
-
-            // Assert
-            Assert.IsNotNull(result);
-            Assert.AreEqual(webElement, result);
-        }
-        #endregion
     }
 }
