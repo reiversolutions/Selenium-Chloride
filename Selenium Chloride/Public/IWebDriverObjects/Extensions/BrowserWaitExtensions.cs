@@ -5,6 +5,7 @@ using System.Text;
 using Selenium_Chloride.Internal.Constants;
 using System.Threading;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Selenium_Chloride
 {
@@ -13,6 +14,15 @@ namespace Selenium_Chloride
     /// </summary>
     public static class BrowserWaitExtensions
     {
+        /// <summary>
+        /// Return a WebDriverWait to create explicit waits
+        /// </summary>
+        /// <returns></returns>
+        public static WebDriverWait GetExplicitWait(this IBrowser browser)
+        {
+            return new WebDriverWait(browser.IWebDriver, Common.BrowserTimeout);
+        }
+
         /// <summary>
         /// Browser wait for page title to load
         /// </summary>
