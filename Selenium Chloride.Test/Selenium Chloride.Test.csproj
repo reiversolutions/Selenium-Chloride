@@ -39,6 +39,10 @@
       <HintPath>..\packages\LinqToPoml.1.0.0.3\lib\LINQtoPOML.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Selenium Chloride, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Chloride.1.0.0.7\lib\Selenium Chloride.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
@@ -73,12 +77,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Selenium Chloride\Selenium Chloride.csproj">
-      <Project>{705eab93-5388-453e-bc35-a0baf60577b7}</Project>
-      <Name>Selenium Chloride</Name>
-    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
