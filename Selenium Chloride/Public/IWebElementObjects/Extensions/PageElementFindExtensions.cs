@@ -24,5 +24,23 @@ namespace Selenium_Chloride
                 throw new PageElementNotFoundException();
             }
         }
+
+        /// <summary>
+        /// Find multiple IWebElement from the current PageElement
+        /// </summary>
+        /// <param name="element">this Page Elemtn</param>
+        /// <param name="locator">By object</param>
+        /// <returns>List of IWebElement</returns>
+        public static IEnumerable<IWebElement> FindMultiple(this PageElement element, By locator)
+        {
+            try
+            {
+                return element.IWebElement.FindElements(locator);
+            }
+            catch (NoSuchElementException)
+            {
+                throw new PageElementNotFoundException();
+            }
+        }
     }
 }
