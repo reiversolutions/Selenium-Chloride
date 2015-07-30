@@ -78,6 +78,7 @@
     <Compile Include="Public\IWebElementObjects\ButtonElement.cs" />
     <Compile Include="Public\IWebElementObjects\CheckboxElement.cs" />
     <Compile Include="Public\IWebElementObjects\Extensions\PageElementFindExtensions.cs" />
+    <Compile Include="Public\IWebElementObjects\Extensions\StringExtensions.cs" />
     <Compile Include="Public\IWebElementObjects\ImageElement.cs" />
     <Compile Include="Public\IWebElementObjects\LabelElement.cs" />
     <Compile Include="Public\IWebElementObjects\LinkElement.cs" />
